@@ -57,19 +57,11 @@ $(document).ready(function() {
         }
 
     });
-
-    $('button').click(function() {
-        if ($('.top').attr('colspan')) {
-            $('.top').removeAttr('colspan');
-        } else {
-            $('.top').attr('colspan', 6);
-        }
-    });
-
    
     $('#clear').on('click', function() {
 
         $('#gifs').empty();
+        offset = 0;
 
     });
 
