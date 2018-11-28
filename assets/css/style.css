@@ -14,9 +14,23 @@ h1 {
 
 /*
 ==============================
+SECTION
+==============================
+*/
+
+/* section {
+    width: 900px;
+} */
+
+/*
+==============================
 BUTTONS
 ==============================
 */
+
+#buttons {
+    width: 100%;
+}
 
 button {
     margin: 5px;
@@ -25,4 +39,22 @@ button {
     color: #fff;
     border-radius: 15px;
     border: none;
+}
+
+/*
+==============================
+GIFS
+==============================
+*/
+
+#gifs {
+    column-count: 4;
+    column-gap: 1em;
+}
+
+.gifClass {
+    display: block;
+    margin: 0 0 1em;
+    width: 100%;
+    z-index: 999;
 }
