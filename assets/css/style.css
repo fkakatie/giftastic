@@ -6,10 +6,26 @@ BASIC SETUP
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-gap: 10px;
 }
 
 h1 {
     font-size: 3em;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #111; 
+    border-radius: 5px;
 }
 
 /*
@@ -18,9 +34,22 @@ SECTION
 ==============================
 */
 
-/* section {
-    width: 900px;
-} */
+section {
+    /* width: 900px; */
+}
+
+.sidebar {
+    background: #111;
+    color: #fff;
+    padding: 15px;
+    height: 100vh;
+}
+
+.mainBody {
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-top: 10px;
+}
 
 /*
 ==============================
