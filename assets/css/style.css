@@ -48,13 +48,16 @@ GIFS
 */
 
 #gifs {
-    column-count: 4;
-    column-gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .gifClass {
-    display: block;
+    /* display: block;
     margin: 0 0 1em;
     width: 100%;
-    z-index: 999;
+    z-index: 999; */
+    margin-right: 10px;
+    margin-bottom: 10px;
 }

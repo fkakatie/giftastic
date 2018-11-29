@@ -1,4 +1,4 @@
-var topics = ["the office", "b99", "superstore", "community"];
+var topics = ["the office", "b99", "superstore", "community", "the good place"];
 
 var giphyAPI = "bjggJV6O96rSqs1w9A4ivSwF6NFLgGTY";
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
         var searchTerm = $(this).attr('data-topic');
 
         $.ajax({
-            url: "http://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=" + giphyAPI + "&offset=" + offset + "&limit=5",
+            url: "https://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=" + giphyAPI + "&offset=" + offset + "&limit=5",
             method: "GET"
         }).then(function(response) {
     
@@ -32,7 +32,7 @@ $(document).ready(function() {
     
                 var giphy = $('<img>');
                 giphy.addClass('gifClass');
-                giphy.attr('src', response.data[j].images.fixed_width_still.url);
+                giphy.attr('src', response.data[j].images.fixed_height_still.url);
                 $('#gifs').prepend(giphy);
      
             }
