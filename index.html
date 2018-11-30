@@ -13,6 +13,7 @@
 
     <!-- FONTS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
     <!-- MEDIA QUERIES -->
 
@@ -22,15 +23,54 @@
 
     <section class="sidebar">
 
+        
+
         <header>
-            <h1>GifTastic</h1>
+
+            <div class="container">
+                <h1>GifTastic</h1>
+                <p>Press a button below to see a bunch of gifs from that show. Even add your own favorite show to the list!</p>
+            </div>
+            
         </header>
 
         <div id="buttons">
-            <button id="clear">Clear Gifs</button>
+
+            <div class="container">
+
+                <div id="topicBtns"></div>
+                <div id="clearBtn">
+                    <button id="clear">clear gifs</button>
+                </div>
+                <div id="newBtn">
+                    <form id="addTopic">
+                        <input type="text" id="newTopic" placeholder="add a new show">
+                        <button type="submit" id="submitBtn" value="submit">+</button>
+                    </form> 
+                </div>
+
+            </div>
+            
         </div>
 
         <footer>
+
+            <div class="container">
+
+                <nav>
+                    <ul>
+                        <li><a href="https://fkakatie.github.io/responsive-portfolio/index.html" target="_blank">About</a></li><!--
+                        --><li><a href="https://fkakatie.github.io/responsive-portfolio/portfolio.html" target="_blank">Portfolio</a></li><!--
+                        --><li><a href="https://fkakatie.github.io/responsive-portfolio/contact.html" target="_blank">Contact</a></li><!--
+                        --><li><a href="https://github.com/fkakatie" target="_blank"><i class="fab fa-lg fa-github-square"></i></a></li>
+                    </ul>
+                </nav>
+                    
+                <div class="copyright">
+                    <p>&copy; 2018</p>
+                </div>
+            
+            </div>
 
         </footer>
 
