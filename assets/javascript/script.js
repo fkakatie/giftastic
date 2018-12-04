@@ -62,6 +62,9 @@ $(document).ready(function() {
 
             // readds buttons from updated topics array
             addBtns();
+
+            // clears text value in from
+            $('#newTopic').val('');
         
         };
 
