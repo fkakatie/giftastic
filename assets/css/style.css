@@ -9,12 +9,16 @@ body {
     display: grid;
     grid-template-columns: 320px 1fr;
     grid-gap: 10px;
-    background: #333;
+    background: #444;
 }
 
 h1 {
     font-size: 3em;
     font-family: 'VT323', monospace;
+}
+
+p {
+    padding-top: 0.5em;
 }
 
 ::-webkit-scrollbar {
@@ -46,12 +50,24 @@ HEADER
 */
 
 header {
-    background: #690;
-    background-image: url(../images/errorbars.gif);
+    background: #065d61;
+    background-image: url(../images/errorbars.png);
     color: #fff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.credit {
+    font-family: 'VT323', monospace;
+    font-size: 0.9em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.credit a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /*
@@ -84,7 +100,7 @@ BUTTONS
     display: grid;
     grid-template-columns: 1fr;
     margin-bottom:92px;
-    height: calc(100vh - 126px - 92px);
+    height: calc(100vh - 155px - 95px);
     overflow-y: auto;
 }
 
@@ -93,13 +109,13 @@ BUTTONS
 }
 
 #buttons::-webkit-scrollbar-thumb {
-    background: #690; 
+    background: #065d61; 
     border: 1px solid #000;
 }
 
 button {
     padding: 5px 15px;
-    background: #690;
+    background: #065d61;
     color: #fff;
     border-radius: 15px;
     border: none;
@@ -119,7 +135,7 @@ button:hover {
 
 #clear {
     width: 100%;
-    background: #666;
+    background: #444;
     margin-bottom: 5px;
 }
 
@@ -165,22 +181,21 @@ FOOTER
 */
 
 footer {
-    /* background: #fabbbb; */
     padding: 5px 0;
     position: absolute;
     bottom: 0;
     width: 100%;
-    color: #333;
+    color: #444;
 }
 
 footer a {
-    color: #333;
+    color: #444;
     text-decoration: none;
     transition: all .75s;
 }
 
 footer a:hover {
-    color: #690;
+    color: #065d61;
 }
 
 footer .container {
