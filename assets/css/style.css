@@ -173,9 +173,51 @@ GIFS
     width: 100%;
 }
 
-.gifClass {
+.divClass {
     margin-right: 10px;
     margin-bottom: 10px;
+    font-family: 'VT323', monospace;
+    position: relative;
+    background: #000;
+    height: 150px;
+}
+
+.divClass:hover > p {
+    opacity: 0.1;
+}
+
+.divClass p {
+    bottom: 10px;
+    right: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 999;
+    background: #111;
+    color: #efefef;
+    transition: .75s all;
+    opacity: 0.9;
+}
+
+.gridClass {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+/* .faveClass {
+    text-align: right;
+    color: #ccc;
+}
+
+.faveClass:hover {
+    color: #916f03;
+    transition: .75s all;
+}
+
+.favedClass {
+    color: #916f03;
+} */
+
+.gifClass {
     height: 150px;
 }
 

@@ -4,6 +4,8 @@ var giphyAPI = "bjggJV6O96rSqs1w9A4ivSwF6NFLgGTY"; // my giphy api key
 
 var offset = 0; // sets offset so new gifs are reloaded
 
+var favedGifs= [];
+
 // wait for dom to load
 $(document).ready(function() {
 
@@ -83,11 +85,31 @@ $(document).ready(function() {
     
             // adds gifs!
             for (var j = 0; j < response.data.length; j++) {
+
+                var giphyDiv = $('<div>');
+                giphyDiv.addClass('divClass');
+
+                var giphyGrid = $('<div>');
+                giphyGrid.addClass('gridClass');
     
                 var giphy = $('<img>');
                 giphy.addClass('gifClass');
-                giphy.attr('src', response.data[j].images.fixed_height_still.url);
-                $('#gifs').prepend(giphy);
+                giphy.attr('src', response.data[j].images.fixed_height_still.url);             
+
+                var rating = $('<p>');
+                // rating.addClass('rotated');
+                rating.html('RATED ' + response.data[j].rating.toUpperCase());
+
+                // var faveBtn = $('<p>');
+                // faveBtn.addClass('faveClass');
+                // faveBtn.html('<i class="far fa-star"></i>');
+
+                giphyGrid.append(giphy).append(rating)
+                // giphyGrid.append(faveBtn);
+
+                giphyDiv.append(giphy).append(rating);
+
+                $('#gifs').prepend(giphyDiv);
      
             };
     
@@ -97,6 +119,34 @@ $(document).ready(function() {
         offset += 10;
 
     });
+
+    // toggle fave star on hover/click
+    // $(document).on('click', 'p.faveClass', function() {
+
+    //     var star = $(this).html();
+
+    //     console.log(favedGifs);
+
+    //     var starredHTML = ($(this).parent().parent().html());
+
+    //     console.log(starredHTML);
+
+    //     if (star.includes('far')) {
+    //         $(this).html('<i class="fas fa-star"></i>');
+    //         $(this).addClass('favedClass');
+
+    //         if (starredHTML.includes('_s')) {
+                
+    //         }
+
+    //         // favedGifs.push()
+    //     }
+    //     else {
+    //         $(this).html('<i class="far fa-star"></i>');
+    //         $(this).removeClass('favedClass');
+    //     };
+        
+    // });
 
     // toggle still image with gif on click
     $('#gifs').on('click', 'img.gifClass', function() {
