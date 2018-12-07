@@ -148,6 +148,37 @@ $(document).ready(function() {
         
     // });
 
+    function hideSidebar() {
+        $('div.container').addClass('invisible');
+        $('.sidebar').addClass('slide');
+        $('section.mainBody').addClass('slide plus');
+    };
+
+    function showSidebar() {
+        $('.sidebar').removeClass('slide');
+        $('section.mainBody').removeClass('slide plus');
+        $('div.container').removeClass('invisible');
+    };
+
+    // toggle still image with gif on click
+    $('#headerBtn').on('click', function() {
+
+        var headDiv = $(this).html();
+
+        if (headDiv.includes('times')) {
+            $(this).html(headDiv.replace('times','bars'));
+            hideSidebar();
+        }
+        else {
+            $(this).html(headDiv.replace('bars','times'));
+            showSidebar();
+        }
+
+        console.log(this);
+        console.log(headDiv);
+
+    });
+
     // toggle still image with gif on click
     $('#gifs').on('click', 'img.gifClass', function() {
 

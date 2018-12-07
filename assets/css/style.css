@@ -56,6 +56,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .credit {
@@ -63,6 +64,7 @@ header {
     font-size: 0.9em;
     text-align: right;
     text-transform: uppercase;
+    opacity: 0.9;
 }
 
 .credit a {
@@ -72,7 +74,20 @@ header {
 }
 
 .credit a:hover {
-    color: #444;
+    background: #065d61;
+}
+
+#headerBtn {
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    opacity: 0.8;
+    transition: .75s all;
+}
+
+#headerBtn:hover {
+    opacity: 1;
+    visibility: visible !important;
 }
 
 /*
@@ -85,14 +100,30 @@ SECTION
     background: #111;
     color: #fff;
     position: relative;
+    min-width: 320px;
     height: 100vh;
     max-height: 100vh;
+    transition: transform 0.75s ease;
+}
+
+.slide {
+    transform: translate3d(-274px, 0, 0);
+}
+
+.invisible {
+    visibility: hidden;
+    transition: .75s all;
+}
+
+.plus {
+    width: calc(100% + 274px);
 }
 
 .mainBody {
     max-height: 100vh;
     overflow-y: auto;
     padding-top: 10px;
+    transition: transform 0.75s ease;
 }
 
 /*
