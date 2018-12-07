@@ -124,6 +124,7 @@ SECTION
 
 .plus {
     width: calc(100% + 274px);
+    max-width: calc(100vw - 46px);
 }
 
 .mainBody {
