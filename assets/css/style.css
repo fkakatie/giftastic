@@ -104,7 +104,14 @@ SECTION
     height: 100vh;
     max-height: 100vh;
     transition: transform 0.75s ease;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    overflow-x: hidden;
 }
+
+/* .sidebar > * {
+    border: 2px solid red;
+} */
 
 .slide {
     transform: translate3d(-274px, 0, 0);
