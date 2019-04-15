@@ -97,7 +97,7 @@ $(document).ready(function() {
                 giphy.attr('src', response.data[j].images.fixed_height_still.url);             
 
                 var rating = $('<p>');
-                // rating.addClass('rotated');
+                rating.addClass('rating');
                 rating.html('RATED ' + response.data[j].rating.toUpperCase());
 
                 // var faveBtn = $('<p>');
@@ -160,7 +160,7 @@ $(document).ready(function() {
         $('div.container').removeClass('invisible');
     };
 
-    // toggle still image with gif on click
+    // slides sidebar in and out
     $('#headerBtn').on('click', function() {
 
         var headDiv = $(this).html();
@@ -189,6 +189,7 @@ $(document).ready(function() {
         }
         else {
             $(this).attr('src', URL.replace('.gif','_s.gif'));
+            $('.rating').removeClass('invisible');
         }
 
     });
